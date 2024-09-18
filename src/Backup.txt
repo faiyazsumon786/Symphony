@@ -1,0 +1,186 @@
+// // src/components/Products.jsx
+// const products = [
+//     { img: '/src/assets/vat.png', heading: 'Shampan VAT', description: 'Shampan VAT software is for processing your VAT through Purchase and Sales transaction of your raw materials and finish goods. The Shampan VAT software is developed as per VAT Acts of National Board of Revenue(NBR)' },
+//     { img: '/product2.jpg', heading: 'Product 2', description: 'Description of Product 2' },
+//     { img: '/product3.jpg', heading: 'Product 3', description: 'Description of Product 3' },
+//     { img: '/product4.jpg', heading: 'Product 4', description: 'Description of Product 4' },
+//     { img: '/product5.jpg', heading: 'Product 5', description: 'Description of Product 5' },
+//     { img: '/product6.jpg', heading: 'Product 6', description: 'Description of Product 6' },
+//   ];
+  
+//   const Products = () => {
+//     return (
+//       <div className="container mx-auto my-16">
+//         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//           {products.map((product, index) => (
+//             <div
+//               key={index}
+//               className="bg-white rounded-lg shadow-lg p-6 transition-transform transform hover:scale-105 hover:shadow-xl group"
+//             >
+//               <div className="relative w-full h-64 mb-4 overflow-hidden rounded-lg aspect-w-16">
+//                 <img
+//                   src={product.img}
+//                   alt={product.heading}
+//                   className="absolute w-[300px] object-cover transition-transform group-hover:scale-110"
+//                 />
+//               </div>
+//               <h3 className="text-2xl font-semibold mb-2 text-gray-900 group-hover:text-red-600 transition-colors">
+//                 {product.heading}
+//               </h3>
+//               <p className="text-gray-700 mb-4">{product.description}</p>
+//               <div className="text-center">
+//                 <button className="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition-transform transform hover:scale-110">
+//                   Learn More
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     );
+//   };
+  
+//   export default Products;
+
+
+
+
+
+// import React from 'react';
+
+const products = [
+  {
+    img: 'path/to/product1.jpg',
+    heading: 'Product 1',
+    description: 'This is a description of Product 1. It provides the best features for users.',
+    link: '/product1',
+  },
+  {
+    img: 'path/to/product2.jpg',
+    heading: 'Product 2',
+    description: 'This is a description of Product 2. It provides advanced tools for businesses.',
+    link: '/product2',
+  },
+  {
+    img: 'path/to/product3.jpg',
+    heading: 'Product 3',
+    description: 'This is a description of Product 3. It offers incredible performance for professionals.',
+    link: '/product3',
+  },
+  {
+    img: 'path/to/product4.jpg',
+    heading: 'Product 4',
+    description: 'This is a description of Product 4. Its intuitive design makes it perfect for users.',
+    link: '/product4',
+  },
+  {
+    img: 'path/to/product5.jpg',
+    heading: 'Product 5',
+    description: 'This is a description of Product 5. It is highly recommended for startups and enterprises.',
+    link: '/product5',
+  },
+  {
+    img: 'path/to/product6.jpg',
+    heading: 'Product 6',
+    description: 'This is a description of Product 6. It brings top-notch quality to the table.',
+    link: '/product6',
+  },
+];
+
+const Products = () => {
+  return (
+    <div className="bg-gray-100 py-16">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12 uppercase tracking-wider">
+        Our Products
+      </h2>
+      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+        {products.map((product, index) => (
+          <div
+            key={index}
+            className="relative bg-white rounded-lg shadow-lg overflow-hidden transition-all duration-500 hover:shadow-xl hover:scale-105 group"
+          >
+            <img
+              src={product.img}
+              alt={product.heading}
+              className="w-full h-56 object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+            />
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold text-gray-800 transition-all duration-300 group-hover:text-indigo-500">
+                {product.heading}
+              </h3>
+              <p className="mt-4 text-gray-600">
+                {product.description}
+              </p>
+              <a
+                href={product.link}
+                className="inline-block mt-6 px-5 py-2 text-white bg-indigo-500 rounded-full transition-all duration-300 hover:bg-indigo-600 hover:shadow-lg"
+              >
+                Learn More
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Products;
+
+
+
+
+
+
+// import React from 'react';
+import 'animate.css'; // For animation
+import '../style.css'; // Custom styles for more control
+
+const services = [
+  { icon: '🌐', heading: 'Web Development', description: 'Create stunning and responsive websites tailored to your business needs. Engage your customers with a seamless online presence.' },
+  { icon: '📱', heading: 'Mobile Apps', description: 'Design and develop high-performance mobile applications for both iOS and Android platforms. Enhance user experience with intuitive and engaging interfaces.' },
+  { icon: '⚙️', heading: 'Software Solutions', description: 'Provide custom software solutions to automate your business processes. Increase efficiency with tailored applications designed for your unique requirements.' },
+  { icon: '📈', heading: 'Digital Marketing', description: 'Boost your brand’s visibility with targeted digital marketing strategies. Leverage SEO, content marketing, and social media to drive traffic and conversions.' },
+  { icon: '🔒', heading: 'Cybersecurity', description: 'Protect your digital assets with robust cybersecurity solutions. Safeguard your business from threats and vulnerabilities with advanced security measures.' },
+  { icon: '💡', heading: 'Consulting Services', description: 'Receive expert advice and strategies to optimize your business operations. Benefit from industry insights and innovative solutions to drive growth and success.' },
+];
+
+const ServiceSection = () => {
+  return (
+    <div className="bg-gradient-to-r from-teal-700 via-cyan-700 to-blue-700 py-16">
+      <h2 className="text-5xl font-extrabold text-center text-white mb-12 tracking-wider uppercase">
+        Our Services
+      </h2>
+      <div className="flex flex-wrap justify-center gap-12">
+        {services.map((service, index) => (
+          <div
+            key={index}
+            className="relative w-full max-w-sm bg-gray-800 rounded-3xl shadow-lg overflow-hidden transform transition-transform duration-500 group hover:scale-105 hover:shadow-[0_0_20px_6px_rgba(0,255,255,0.6)]"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-teal-600 to-teal-400 opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+            <div className="relative z-10 p-8 text-center">
+              <div className="text-5xl mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                {service.icon}
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-2s">
+                {service.heading}
+              </h3>
+              <p className="text-gray-300 mb-6 animate__animated animate__fadeIn animate__delay-3s">
+                {service.description}
+              </p>
+              <a
+                href="#learn-more"
+                className="inline-block px-6 py-3 text-lg text-white bg-teal-500 rounded-lg font-semibold transition-transform transform hover:scale-105 hover:bg-teal-600 shadow-lg hover:shadow-2xl animate__animated animate__fadeIn animate__delay-4s"
+              >
+                Learn More
+              </a>
+            </div>
+            <div className="absolute inset-0 border-4 border-transparent rounded-3xl group-hover:border-teal-300 transition-all duration-500"></div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default ServiceSection;
